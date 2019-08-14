@@ -1,4 +1,4 @@
-// Fonction pour transformer une valeur RGB en valeur HEX
+// Fonction pour transformer une valeur RGB en valeur HEX (kyu 5)
 
 // Fonction pour transformer le int déocupé en base 16 en char hexa
 char hexachar (int value)
