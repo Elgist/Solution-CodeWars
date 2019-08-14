@@ -1,0 +1,17 @@
+// Trouvez la lettre manquante dans une suite de caractère et retourner la lettre manquante
+
+char findMissingLetter(char array[], int arrayLength)
+{
+  int i = 0;
+  // Je parcours le tableau
+  while (i < arrayLength)
+  {
+  //Dès que j'ai un décallage de +2 c'est que la valeur de la lettre entre est manquante
+    if( array[i+1] - array[i] == 2)
+    {
+      return (array[i] + 1);
+    }
+    i++;
+  }
+  return 'NULL';
+}
