@@ -1,4 +1,4 @@
-// Concaténation de plusieurs chaines de caractères
+// Concaténation de plusieurs chaines de caractères (kyu 8)
 
 #include <string.h>
 
