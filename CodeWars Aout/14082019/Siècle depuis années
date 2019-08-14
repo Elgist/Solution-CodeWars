@@ -1,4 +1,4 @@
-// Revnoyer le siecle depuis la reception d'une année
+// Revnoyer le siecle depuis la reception d'une année (kyu 8)
 
 int centuryFromYear(int year) 
 {
