@@ -1,0 +1,10 @@
+// Envoyer une alarme si la personne est en employée qui n'est pas en vacance (kyu 8)
+
+#include <stdbool.h>
+#include <stdlib.h>
+
+bool set_alarm(bool employed, bool vacation) {
+
+    return (employed == true && vacation == false) ? true : false;
+
+}
