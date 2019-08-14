@@ -1,0 +1,12 @@
+// Revnoyer le siecle depuis la reception d'une année
+
+int centuryFromYear(int year) 
+{
+  int century = 0;
+  century = year /100;
+  if (year %100 != 0)
+  {
+    century ++;
+  }
+  return century ;
+}
