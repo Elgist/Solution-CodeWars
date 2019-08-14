@@ -1,0 +1,116 @@
+// Fonction pour transformer une valeur RGB en valeur HEX
+
+// Fonction pour transformer le int déocupé en base 16 en char hexa
+char hexachar (int value)
+{
+  switch (value)
+  {
+    case 0:
+    return '0';
+    break;
+    case 1:
+    return '1';
+    break;
+    case 2:
+    return '2';
+    break;
+    case 3:
+    return '3';
+    break;
+    case 4:
+    return '4';
+    break;
+    case 5:
+    return '5';
+    break;
+    case 6:
+    return '6';
+    break;
+    case 7:
+    return '7';
+    break;
+    case 8:
+    return '8';
+    break;
+    case 9:
+    return '9';
+    break;
+    case 10:
+    return 'A';
+    break;
+    case 11:
+    return'B';
+    break;
+    case 12:
+    return 'C';
+    break;
+    case 13:
+    return'D';
+    break;
+    case 14:
+    return 'E';
+    break;
+    case 15:
+    return 'F';
+    break;
+  }
+}
+
+int rgb(int r, int g, int b, char *output)
+{
+// Déclaration des variables
+  int temp = 0;
+  int i = 0;
+
+// Je vérifie que chaque nombre est dans la range
+    if (r < 0)
+    {
+      r = 0;
+    }
+    if (g < 0)
+    {
+      g = 0;
+    }
+    if (b < 0)
+    {
+      b = 0;
+    }
+    if (r > 255)
+    {
+      r = 255;
+    }
+    if (g > 255)
+    {
+      g = 255;
+    }
+    if (b > 255)
+    {
+      b = 255;
+    }
+// Je transforme chaque int en hexa que je stocke dans chaine
+for(; i < 6; i+=2)
+{
+  if (i<2 && i>=0)
+  {
+    output[i] = hexachar(r/16);
+    temp = r/16;
+    r = r -(temp*16);
+    output[i+1] = hexachar(r);
+  }
+  if (i<4 && i>=2)
+  {
+    output[i] = hexachar(g/16);
+    temp = g/16;
+    g = g -(temp*16);
+    output[i+1] = hexachar(g);
+  }
+  if (i<6 && i>=4)
+  {
+    output[i] = hexachar(b/16);
+    temp = b/16;
+    b = b -(temp*16);
+    output[i+1] = hexachar(b);
+  }
+}
+   return 0; 
+}
