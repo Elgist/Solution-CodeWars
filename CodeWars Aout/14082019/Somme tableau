@@ -1,0 +1,13 @@
+// Somme d'un tableau de valeur (kyu 8)
+
+#include <stddef.h>
+
+int sum_array(const int *values, size_t count)
+{
+  float result = 0;
+  for (int i = 0; i < count; i++)
+  {
+    result = result + values[i];
+  }
+  return result;  
+}
