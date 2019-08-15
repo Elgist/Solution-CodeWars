@@ -1,0 +1,28 @@
+// Concaténation de plusieurs chaines de caractères (kyu 8)
+
+#include <string.h>
+
+char *smash(const char **words, size_t count)
+{
+  char *result = malloc (sizeof(words) * count);
+  int j = 0;
+  int i = 0;
+  int index = 0;
+  
+  while (i < count)
+  {
+    while (words[i][j] != '\0')
+    {
+      result[index] = words[i][j];
+      index ++;
+      printf("%s\n", result);
+      j++;
+    }
+  result [index] = ' ';
+  index++;
+  j=0;
+  i++;
+  }
+ result [index -1] = '\0'; 
+return result;
+}

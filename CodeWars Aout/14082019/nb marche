@@ -1,0 +1,23 @@
+// Nombre de marche en 20 ans (Kyu 8)
+#include <stddef.h>
+
+int stairs_in_20(const int stairs[7][52]) {
+
+   long oneYear = 0;
+   int readWeek = 0;
+   int readDay = 0;
+   
+   while (readWeek < 52)
+   {
+     while (readDay < 7)
+     {
+       oneYear += stairs[readDay][readWeek];
+       readDay++;
+       printf("%d\n", oneYear);
+     }
+     readDay=0;
+     readWeek++;
+    }
+  return oneYear*20;
+
+}
