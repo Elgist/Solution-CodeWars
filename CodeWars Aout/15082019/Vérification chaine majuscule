@@ -5,19 +5,12 @@
 
 bool is_uppercase(const char *source)
 {
-  // Création de la chaine en majuscule
-  char *test = malloc(strlen(source));
   int letter = 0;
-  //Alimentation de la chaine lettre par lettre
-  while (letter < strlen(source))
+  while(source[letter] == toupper(source[letter]) && letter < strlen(source))
   {
-    test[letter] = toupper(source[letter]);
     letter++;
   }
-  test[letter]='\0';
-
-  // Comparaison des deux chaines avant renvoie de la valeur
-  if (strcmp(test, source) == 0)
+  if (letter == strlen(source))
   return true;
   else
   return false;
